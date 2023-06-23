@@ -21,6 +21,10 @@
                 color: #fff;
                 padding: 24px;
                 position: relative;
+                
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
 
                 &::after {
                     content: '+';

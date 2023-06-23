@@ -42,8 +42,11 @@
                 height: 83px;
 
                 @media (max-width: 1023px) and (min-width: 768px) {
-                    
                     height: 54px;
+                }
+
+                @media (max-width: 767px) {
+                    height: 70px;
                 }
             }
 

@@ -1,6 +1,13 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+
+function scripts() {
+    return gulp.src('./src/scripts/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js/'))
+}
 
 function watch() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
@@ -18,5 +25,5 @@ function image() {
         .pipe(gulp.dest('./dist/images/'))
 }
 
-exports.default = gulp.parallel(styles, image);
+exports.default = gulp.parallel(styles, image, scripts);
 exports.watch = watch;
