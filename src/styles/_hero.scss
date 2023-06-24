@@ -5,18 +5,20 @@
     min-height: 80vh;
     background-image: url('../images/hero_desktop.jpeg');
     text-align: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
     @media (max-width: 767px) {
         width: 100%;
         background-image: url(../images/hero_celular.jpeg);
         padding-top: calc(50vw + 25px);
+        background-size: contain;
     }
 
     @media (max-width: 1023px) and (min-width: 768px) {
         background-image: url(../images/hero_tablet.jpg);
         padding-top: calc(50vw + 25px);
+        background-size: contain;
     }
 
     .button {
